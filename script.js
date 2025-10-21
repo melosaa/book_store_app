@@ -16,6 +16,7 @@ window.onscroll = () => {
   } else {
     document.querySelector(".header .header-2").classList.remove("active");
   }
+  fadeOut();
 };
 
 window.onload = () => {
@@ -24,7 +25,14 @@ window.onload = () => {
   } else {
     document.querySelector(".header .header-2").classList.remove("active");
   }
+  fadeOut();
 };
+function loader() {
+  document.querySelector(".loader-container").classList.add("active");
+}
+function fadeOut() {
+  setTimeout(loader, 4000);
+}
 var swiper = new Swiper(".books-slider", {
   loop: true,
   centeredSlides: true,
@@ -106,15 +114,12 @@ var swiper = new Swiper(".review-slider", {
   },
   breakpoints: {
     0: {
-      // Mobil ekranlar
       slidesPerView: 1,
     },
     768: {
-      // Tablet
       slidesPerView: 2,
     },
     1024: {
-      // Laptop/Desktop
       slidesPerView: 3,
     },
   },
@@ -133,20 +138,13 @@ var swiper = new Swiper(".blogs-slider", {
   },
   breakpoints: {
     0: {
-      // Mobil ekranlar
       slidesPerView: 1,
     },
     768: {
-      // Tablet
       slidesPerView: 2,
     },
     1024: {
-      // Laptop/Desktop
       slidesPerView: 3,
     },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 });
