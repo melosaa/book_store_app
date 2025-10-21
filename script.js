@@ -123,3 +123,30 @@ var swiper = new Swiper(".review-slider", {
     prevEl: ".swiper-button-prev",
   },
 });
+var swiper = new Swiper(".blogs-slider", {
+  spaceBetween: 20,
+  loop: true,
+  centeredSlides: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      // Mobil ekranlar
+      slidesPerView: 1,
+    },
+    768: {
+      // Tablet
+      slidesPerView: 2,
+    },
+    1024: {
+      // Laptop/Desktop
+      slidesPerView: 3,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
